@@ -30,7 +30,10 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MONGO_URI = os.environ.get("MONGO_URI", "mongodb://localhost:27017/")
+MONGO_URI = os.environ.get("MONGO_URI")
+if not MONGO_URI:
+    print("ERROR: MONGO_URI environment variable not set!")
+    raise SystemExit(1)
 
 try:
     mongo_client = MongoClient(MONGO_URI, serverSelectionTimeoutMS=5000)
