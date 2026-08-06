@@ -90,7 +90,6 @@ All demo accounts have the password: `password123`
 - Creating a responsive, dark/light UI
 
 ---
-
 ## 📄 License
 
 MIT
